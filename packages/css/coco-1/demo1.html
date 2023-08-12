@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="flex">
+        <!-- 需要额外包裹一层用来滚动 -->
+        <div class="container">
+            <button>Button</button>
+            <button>Button</button>
+            <button>Button</button>
+            <button>Button</button>
+            <button>Button</button>
+            <button>Button</button>
+            <button>Button</button>
+        </div>
+    </div>
+</body>
+</html>
+
+<style>
+    .flex {
+        position: relative;
+        box-sizing: border-box;
+        width: 600px;
+        height: 80px;
+        border: 1px solid #000;
+        margin: 20px auto;
+        padding: 10px
+    }
+
+    .flex::after {
+        position: absolute;
+        /* border: 1px solid pink; */
+        right: 0px;
+        top:0px;
+        bottom: 0px;
+        width: 100px;
+        margin: 0;
+        padding: 0;
+        content: '';
+        background: linear-gradient(90deg, transparent,#fff);
+    }
+
+    .container {
+        display: flex;
+        height: 100%;
+        width: 100%;
+        overflow-x: scroll;
+    }
+
+    button {
+        margin-left: 10px;
+        height: 30px;
+    }
+
+</style>
