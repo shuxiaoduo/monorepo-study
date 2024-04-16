@@ -1,5 +1,14 @@
+import { ReactNode,FC } from 'react';
 import Style from './comp1.module.scss';
-
-export default function Comp1() {
-	return <div className={Style.box}>comp1</div>;
+interface Comp1Props {
+	content: ReactNode
 }
+
+const Comp1: FC<Comp1Props> = props => {
+	return <div className={Style.box}>
+		Comp1
+		{props.content}
+	</div>;
+}
+
+export default Comp1;

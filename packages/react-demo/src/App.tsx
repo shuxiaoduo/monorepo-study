@@ -8,7 +8,7 @@ function App() {
 	return (
 		<>
 			<div>顶级组件</div>
-			<Comp1></Comp1>
+			<Comp1 content={<div><button>click</button></div>}></Comp1>
 			<Comp2></Comp2>
 		</>
 	);
